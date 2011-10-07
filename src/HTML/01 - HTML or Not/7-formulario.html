@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+<head>
+    <title>Profile</title>
+    <link rel="index" href="0-index.html" />
+    <link rel="prev" href="4-aulas.html" />
+</head>
+<body>
+    <form action="7-formulario.html" enctype="multipart/form-data">
+        <p>
+            <label>Nome<input placeholder="escreva aqui o nome" required="required" type="text" name="tittle" /></label>
+        </p>
+        <p>
+            <label>Acronym<input required="required" pattern="\d+" type="text" name="acronym" /></label>
+        </p>
+        <fieldset>
+            <legend>Files</legend>
+            <p>
+                <label for="enunciado">Enunciado<input type="file" id="enunciado" name="enunciado" /></label>
+            </p>
+            <p>
+                <label for="enunciado">Enunciado<input type="file" id="File1" name="enunciado" /></label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Times</legend>
+            <p>
+                <label>StartDate<input  type="datetime" name="startdate"/></label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Checkboxes</legend>
+            <p>
+                <label>Accept Late Submission <input type="checkbox" name="acceptlatesubmission" /></label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Dropdown</legend>
+            <p>
+                <label>Maximum Upload File Size 
+                <select name="maxupload">
+                    <option></option>
+                    <option value="1">1 MB</option>
+                    <option value="19">10 MB</option>
+                </select>
+                </label>
+            </p>
+        </fieldset>
+        <input type="submit" />
+    </form>
+</body>
+</html>

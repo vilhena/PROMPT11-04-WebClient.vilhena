@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+<head>
+    <title>Profile</title>
+    <link rel="index" href="0-index.html" />
+    <link rel="prev" href="4-aulas.html" />
+    <style type="text/css">
+        body,article, h1, h2 {xborder:solid 1px black}
+        article > *:nth-child(2n+1) {xbackground-color:Green}
+        article > *:nth-child(2n) {xbackground-color:Yellow}
+        
+        body {padding:0; margin:0}
+        
+        article  
+        {
+            position:absolute; top:10px; 
+            background-color:#EEEEEE;
+            padding:2em;
+        }
+        
+        .selected{ z-index:1 }
+        
+        article.slide 
+        {
+            width:500px;
+            height:400px;
+            margin-top:20px;
+            margin-bottom:20px;
+            background-image: url(http://t2.gstatic.com/images?q=tbn:ANd9GcSJ843V7xcBuKaw3H6F5EO6jOG3KEYv_XxRojVXLqXufOPUNSNKzw);
+            background-repeat: no-repeat;
+        }
+        
+        article.slide.tittle 
+        {
+            text-align:center;
+        }
+        
+        article.slide.tittle h1 
+        {
+            margin-top:30%;
+            font-size:3em;
+            border-bottom:1px dashed Gray;
+        }
+        article.slide.tittle h2 
+        { 
+            font-size:2em;
+            font-style:italic;
+        }
+        
+        article.slide.content h1  
+        {
+            text-align:right; 
+            font-size:2em;
+        }
+        article.slide.content h2 
+        {
+            text-align:right;
+            font-size:1,5em;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <article class="slide tittle">
+        <h1>Slide Tittle 1</h1>
+        <h2>subtittle</h2>
+    </article>
+    <article class="slide content">
+        <h1>Slide Tittle 2</h1>
+        <h2>subtittle</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lorem 
+            augue, pellentesque eget rhoncus malesuada, volutpat eu lacus. Cum sociis 
+            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lorem 
+            augue, pellentesque eget rhoncus malesuada, volutpat eu lacus. Cum sociis 
+            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </p>
+    </article>
+    <article class="slide content selected">
+        <h1>Slide Tittle 3</h1>
+        <h2>subtittle</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lorem augue, pellentesque eget rhoncus malesuada, volutpat eu lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+            .
+        </p>
+        <ul>
+            <li>bullet 1</li>
+            <li>bullet 2</li>
+        </ul>
+    </article>
+</body>
+</html>
