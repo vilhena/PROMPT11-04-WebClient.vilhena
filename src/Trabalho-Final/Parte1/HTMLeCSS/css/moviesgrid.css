@@ -1,0 +1,62 @@
+﻿_* 
+{
+    border-color: Black;
+    border-width: 2px;
+    border-style:solid;
+}
+
+body
+{
+    width:550px;
+    font-family:Verdana;
+} 
+
+section.movie
+{
+    background-color:#EEE;
+    width:160px;
+    height:240px;
+    display:inline-block;
+    float:left;
+    border:5px;
+    position:relative;
+    margin:5px;
+    border-style:dotted;
+}
+
+section.movie:hover
+{
+    background-color:Orange;
+}
+
+section.movie h1
+{
+    font-size:small;
+    position:absolute;
+    text-align:center;
+    width:140px;
+    top:200px;
+    left:10px;
+}
+
+section.movie img
+{
+    height:200px;
+    width:140px;
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+
+section.movie .year, 
+section.movie .duration,
+section.movie .director,
+section.movie progress,
+section.movie p,
+section.movie ul
+{
+    display:none;
+}
+
+
+

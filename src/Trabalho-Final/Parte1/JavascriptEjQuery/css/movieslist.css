@@ -1,0 +1,120 @@
+﻿_* 
+{
+    border-color: Black;
+    border-width: 2px;
+    border-style:solid;
+}
+
+body
+{
+    width:800px;
+} 
+
+section.movie:nth-child(2N+1)
+{
+    background-color:#EEE; 
+}
+
+section.movie:nth-child(2N)
+{
+    background-color:#DDD; 
+}
+
+section.movie:hover
+{
+    background-color:Orange;
+}
+
+section.movie
+{
+    
+    width:600px;
+    position:relative;
+    padding-left:140px;
+    padding-right:10px;
+    margin:10px;
+    border-style:groove;
+    min-height:200px;
+}
+
+section.movie .year::before
+{
+    content:"( ";
+}
+
+section.movie .year:after
+{
+    content:" )";
+}
+
+section.movie img
+{
+    width:120px;
+    position:absolute;
+    left:10px;
+    top:10px;
+}  
+
+section.movie h1
+{
+    display:inline;
+}
+
+section.movie progress
+{
+    width:50px;   
+}
+
+
+section.movie ul.genders li:nth-child(N+2)::before
+{
+    content:", ";
+}
+
+section.movie ul
+{
+    padding-left:0px;
+}
+
+section.movie ul.genders
+{
+    display:inline-block;
+    float:right;
+}
+
+section.movie ul.genders li
+{
+    display:inline-block;
+}
+
+section.movie ul.actors li
+{
+    display:inline-block;
+}
+
+section.movie ul.actors::before
+{
+    content:"Actors: ";
+}
+
+section.movie ul.actors li:nth-child(N+2)::before
+{
+    content:", ";
+}
+
+section.movie p
+{
+    background-color:#FAFAFA;
+    padding:15px;
+    font-family:Courier;
+}
+
+section.movie .director::before
+{
+    content: "Director: ";
+}
+              
+section.movie .clearfix
+{
+    clear:both;
+}
