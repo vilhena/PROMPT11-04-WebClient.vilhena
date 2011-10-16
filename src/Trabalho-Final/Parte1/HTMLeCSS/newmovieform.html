@@ -77,8 +77,35 @@
         </fieldset>
         <fieldset>
             <legend>Movie Photo drop</legend>
-            <div id="imagedrop"><span id="droplabel">Drop file here...</span></div>
-            <img id="preview" src="" alt="the preview will display here" />
+            <div id="holder" style="width:100px;height:100px;border-color:Black;border-width:medium;border-style:dashed"><span id="droplabel">Drop file here...</span></div>
+            <p id="status">File API &amp; FileReader API not supported</p>
+            <script type="text/javascript">
+                        var holder = document.getElementById('holder'),
+            state = document.getElementById('status');
+
+                        if (typeof window.FileReader === 'undefined') {
+                            state.className = 'fail';
+                        } else {
+                            state.className = 'success';
+                            state.innerHTML = 'File API & FileReader available';
+                        }
+
+                        holder.ondragover = function () { this.className = 'hover'; return false; };
+                        holder.ondragend = function () { this.className = ''; return false; };
+                        holder.ondrop = function (e) {
+                            this.className = '';
+                            e.preventDefault();
+
+                            var file = e.dataTransfer.files[0],
+              reader = new FileReader();
+                            reader.onload = function (event) {
+                                holder.style.background = 'url(' + event.target.result + ') no-repeat center';
+                            };
+                            reader.readAsDataURL(file);
+
+                            return false;
+                        };
+        </script>
         </fieldset>
     </form>
 </body>
