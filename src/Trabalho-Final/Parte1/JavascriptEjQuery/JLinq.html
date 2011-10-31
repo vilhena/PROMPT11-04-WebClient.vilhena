@@ -1,0 +1,86 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JLinq</title>
+    <script src="../../Scripts/jquery-1.6.4.js" type="text/javascript"></script>
+    <script src="js/jLinq.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Sample Data</h1>
+    <hr />
+    <div id="sampleData"></div>
+    <h2>var linqset = linq.from(someArray);</h2>
+    <hr />
+    <div id="from"></div>
+    <h2>linqset.where(predicateFunction)</h2>
+    <hr />
+    <div id="where"></div>
+    <h2>linqset.order(columnSelectorFunction)</h2>
+    <hr />
+    <div id="order"></div>
+    <h2>linqset.select(projectionFunction)</h2>
+    <hr />
+    <div id="select"></div>
+    <h2>linqset.any(predicateFunction)</h2>
+    <hr />
+    <div id="any"></div>
+    <h2>linqset.all(predicateFunction)</h2>
+    <hr />
+    <div id="all"></div>
+    <h2>linqset.count()</h2>
+    <hr />
+    <div id="count"></div>
+    <h2>linqset.foreach(actionFunction)</h2>
+    <hr />
+    <div id="foreach"></div>
+    <script type="text/javascript">
+        var students = [
+            { name: "Joao Manuel", age: 21, avgscore: 12 },
+            { name: "Joao Cardoso", age: 21, avgscore: 16 },
+            { name: "Manuel Botelho", age: 19, avgscore: 10 },
+            { name: "Gonçalo Costa", age: 18, avgscore: 18 },
+            { name: "Ana Cristina", age: 16, avgscore: 10 },
+            { name: "Ricardo Jorge", age: 14, avgscore: 20 }
+            ];
+
+            var printarr = function (arr) {
+                var text = "";
+                $.each(arr, function (index, value) {
+                    $.each(value, function (name, value) {
+                        text += name + "=>" + value + "<br />";
+                    });
+                });
+                return text;
+            };
+
+            $("#sampleData").append(printarr(students));
+
+            var data = linq.from(students).count();
+            $("#count").append("linq.from(students).count() <br />" + data);
+
+            var data1 = linq.from(students);
+            $("#from").append("linq.from(students) <br />" + data1);
+
+            var data2 = linq.from(students).where(function () { return (this.age <= 20); });
+            $("#where").append("linq.from(students).where(function (o) { return (o.age <= 20); }) <br />" + printarr(data2.array));
+
+            var data3 = linq.from(students).order(function (a, b) { return a.age - b.age });
+            $("#order").append("linq.from(students).sort(function (a,b) { return a.age - b.age }) <br />" + printarr(data3.array));
+
+            var data4 = linq.from(students).orderby(function () { return this.avgscore });
+            $("#order").append("linq.from(students).orderby(function () { return this.avgscore}) <br />" + printarr(data4.array));
+
+            var data5 = linq.from(students).select(function () { return this.avgscore });
+            $("#select").append("linq.from(students).select(function () { return this.avgscore}) <br />" + data5.array.toString());
+
+            var data6 = linq.from(students).all(function () { return this.age >= 20 });
+            $("#all").append("linq.from(students).all(function () { return this.age >= 20 }) <br />" + data6);
+
+            var data7 = linq.from(students).any(function () { return this.avgscore == 20 });
+            $("#any").append("linq.from(students).any(function () { return this.avgscore == 20 }) <br />" + data7);
+
+
+
+    </script>
+</body>
+</html>
