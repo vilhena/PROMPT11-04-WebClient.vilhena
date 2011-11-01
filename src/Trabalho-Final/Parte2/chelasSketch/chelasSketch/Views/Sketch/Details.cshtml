@@ -1,0 +1,40 @@
+﻿@model chelasSketch.Models.SketchModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>SketchModel</legend>
+
+    <div class="display-label">Tittle</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tittle)
+    </div>
+
+    <div class="display-label">Image</div>
+    <div class="display-field">
+        @{Html.RenderPartial("_ImageBase64");}
+    </div>
+
+    <div class="display-label">Author</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Author)
+    </div>
+
+    <div class="display-label">Created</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Created)
+    </div>
+
+    <div class="display-label">Changed</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Changed)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

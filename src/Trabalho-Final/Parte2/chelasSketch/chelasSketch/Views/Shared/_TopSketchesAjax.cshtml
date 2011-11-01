@@ -1,0 +1,38 @@
+﻿
+<script src="../../Scripts/jquery-1.5.1.js" type="text/javascript"></script>
+<script src="../../Scripts/templatePlugin.js" type="text/javascript"></script>
+
+<input type="text" id="value" value="4" />
+<input type="button" id="update" value="Update" />
+<div id="container"></div>
+
+
+<script id="drawTemplate" type="html/template" >
+        <h3>$(Tittle)</h3>
+        <p><img src='$(Image)' /></p>
+</script>
+
+
+<script type="text/javascript">
+    var tlp = template("drawTemplate");
+    
+    var fillData = function (data) {
+        $.each(data, function (index, item) {
+            $("#container").append(tlp(item));
+        });
+    }
+
+    //Ajax request to controller
+    var updateData = function () {
+        var count = {
+            'count': $("#value").val()
+        };
+
+        $("#container").html("");
+        $.get('/Sketch/GetTop', count, fillData);
+    }
+
+    $("#update").click(updateData);
+
+    updateData();
+</script>

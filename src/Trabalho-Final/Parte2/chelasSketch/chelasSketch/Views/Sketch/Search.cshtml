@@ -1,0 +1,48 @@
+﻿@model IEnumerable<chelasSketch.Models.SketchModel>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Index</h2>
+<script src="../../Scripts/searchOverTable.js" type="text/javascript"></script>
+<table id="data">
+    <tr>
+        <th>
+            Tittle
+        </th>
+        <th>
+            Image
+        </th>
+        <th>
+            Author
+        </th>
+        <th>
+            Created
+        </th>
+        <th>
+            Changed
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tittle)
+        </td>
+        <td>
+            @{Html.RenderPartial("_ImageBase64",item);}
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Changed)
+        </td>
+    </tr>
+}
+
+</table>

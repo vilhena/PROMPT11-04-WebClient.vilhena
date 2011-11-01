@@ -1,0 +1,7 @@
+C:\Users\gnvilhena\PROMPT\uc02\repos\PROMPT11-04-WebClient.vilhena\src\Trabalho-Final\Parte2\chelasSketch\chelasSketch\bin\chelasSketch.dll
+C:\Users\gnvilhena\PROMPT\uc02\repos\PROMPT11-04-WebClient.vilhena\src\Trabalho-Final\Parte2\chelasSketch\chelasSketch\bin\chelasSketch.pdb
+C:\Users\gnvilhena\PROMPT\uc02\repos\PROMPT11-04-WebClient.vilhena\src\Trabalho-Final\Parte2\chelasSketch\chelasSketch\bin\EntityFramework.dll
+C:\Users\gnvilhena\PROMPT\uc02\repos\PROMPT11-04-WebClient.vilhena\src\Trabalho-Final\Parte2\chelasSketch\chelasSketch\bin\EntityFramework.xml
+C:\Users\gnvilhena\PROMPT\uc02\repos\PROMPT11-04-WebClient.vilhena\src\Trabalho-Final\Parte2\chelasSketch\chelasSketch\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\gnvilhena\PROMPT\uc02\repos\PROMPT11-04-WebClient.vilhena\src\Trabalho-Final\Parte2\chelasSketch\chelasSketch\obj\Debug\chelasSketch.dll
+C:\Users\gnvilhena\PROMPT\uc02\repos\PROMPT11-04-WebClient.vilhena\src\Trabalho-Final\Parte2\chelasSketch\chelasSketch\obj\Debug\chelasSketch.pdb
