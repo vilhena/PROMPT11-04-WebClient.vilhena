@@ -21,10 +21,22 @@ namespace chelasSketch.Controllers
         }
 
         //JSON request
+
+        public JsonResult ListPage(int page, int pageSize)
+        {
+            return Json(service.ListAll().Skip(pageSize * page).Take(pageSize), JsonRequestBehavior.AllowGet);
+        }
+
+        //JSON request
         public JsonResult GetTop(int count)
         {
             var list = service.ListTop(count);
             return Json(list, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Paging()
+        {
+            return View();
         }
 
         public ActionResult TopSketches()
